@@ -18,13 +18,6 @@ public class VersionIncrementor : IPreprocessBuildWithReport
         }
     }
 
-    [MenuItem("Build/Build Current")]
-    public static void BuildCurrent()
-    {
-        IncreaseRevision();
-        BuildPlayerWindow.ShowBuildPlayerWindow();
-    }
-
     static void IncrementVersion(int majorIncr, int minorIncr, int buildIncr)
     {
         string[] lines = PlayerSettings.bundleVersion.Split('.');
